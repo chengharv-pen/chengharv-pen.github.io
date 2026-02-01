@@ -4,3 +4,8 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: content-box;
 }
+
+.custom-dark {
+  background-color:#121212 !important; 
+  color:#e5e7eb !important;
+}
