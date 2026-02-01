@@ -18,82 +18,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>I'm Himel</title>
+  <title>Welcome to Chengharv Pen's page</title>
   <!-- Meta End -->
 </head>
 
 <body style="background-color:#f4f5ff;">
 
-  <main class="d-block mx-auto" style="max-width:400px;">
-
-    <div class="w-100">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid my-auto">
-          <p class="navbar-brand h1 mb-0">
-            I'm Himel
-          </p>
-          <button class="btn btn-danger" onclick="location.href = '/contact';"><i class="fa-solid fa-message pe-2"></i>Let's talk!</button>
-        </div>
-      </nav>
-    </div>
+<main class="d-block mx-auto" style="max-width:600px;">
 
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <img src="res/himel.jpg" alt="" class="rounded-5 d-block mx-auto my-3" style="width:50%">
+          <img src="res/picture.jpg" alt="" class="rounded-5 d-block mx-auto my-3" style="width:50%">
           <p class="h1 text-center fw-bold">
-            Himel Das
-          </p>
-          <p class="fs-6 text-center">
-            @himeeeelll
+            Chengharv Pen
           </p>
           <p class="fs-5 text-center">
-            Hey there! I'm a programmer, podcaster, article writer and a bookworm.
+            Hey there! I'm a programmer focused on data science and machine learning.
           </p>
         </div>
-      </div>
-      <div class="row border border-1 m-3 rounded">
-        <div class="col-4 text-center">
-          <p class="h6 m-1">
-            Age
-          </p>
-          <p class="h1">
-            14
-          </p>
-        </div>
-        <div class="col-4 text-center border-start border-end">
-          <p class="h6 m-1">
-            Grade
-          </p>
-          <p class="h1">
-            8<sup>th</sup>
-          </p>
-        </div>
-        <div class="col-4 text-center">
-          <p class="h6 m-1">
-            Projects
-          </p>
-          <p class="h1">
-            6
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-7">
-          <a href="https://himeeeelll.netlify.app/himel_cv.png" download>
-            <button class="btn btn-danger w-100"><i class="fa-solid fa-download pe-2"></i>Download CV</button>
-          </a>
-        </div>
-        <div class="col-5">
-          <button class="btn btn-outline-danger w-100" onclick="location.href = 'https://github.com/himeeeelll';"><i class="fa-solid fa-briefcase pe-2"></i></i>Projects</button>
       </div>
     </div>
   </div>
-</div>
 </main>
 
+<div class="container">
+  <div class="row">
+    <!-- fs range 1-5 seems to affect it, fs-6 and beyond is just normal text -->
+    <p class="text-center">
+      I enjoy working with real-world datasets: designing end-to-end pipelines, training and evaluating models, and
+      extracting meaningful insights from complex data. My projects include deep learning architectures, recommender
+      systems, and large-scale data analysis, with an emphasis on reproducible experimentation and practical impact.
+    </p>
+  </div>
+</div>
 
+<div class="container d-block mx-auto" style="max-width:600px;">
+  <div class="row">
+    <div class="col-4">
+      <a href="res/DATA_EN_ChengharvPen.pdf">
+        <button class="btn btn-danger w-100"><i class="fa-solid fa-eye pe-2"></i>View CV</button>
+      </a>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-outline-danger w-100" onclick="location.href = 'https://github.com/chengharv-pen';"><i class="fa-solid fa-briefcase pe-2"></i></i>Projects</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#contactModal">
+        <i class="fa-solid fa-message pe-2"></i>Contact
+      </button>
+    </div>
+  </div>
+  </div>
+</div>
 
+<!-- Contact Modal Start -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold">Contact Me</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="container">
+          <div class="row g-2">
+            <div class="col-6">
+              <button class="btn btn-primary w-100"
+                      onclick="location.href='https://www.facebook.com/chengharv.pen';">
+                <i class="fa-brands fa-facebook pe-2"></i>Facebook
+              </button>
+            </div>
+
+            <div class="col-6">
+              <button class="btn btn-success w-100"
+                      onclick="location.href='https://wa.me/15145130099';">
+                <i class="fa-brands fa-whatsapp pe-2"></i>WhatsApp
+              </button>
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-12">
+              <button class="btn btn-danger w-100"
+                      onclick="location.href='mailto:chengharvp@gmail.com';">
+                <i class="fa-solid fa-envelope pe-2"></i>Mail me directly
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Contact Modal End -->
 
 <!-- Native JS Start -->
 <script src="js/index.js"></script>
