@@ -10,9 +10,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <!-- Bootstrap CSS End -->
 
-  <!-- Icon Pack Start -->
+  <!-- Icon Packs Start -->
   <script src="https://kit.fontawesome.com/94b68a0c09.js" crossorigin="anonymous"></script>
-  <!-- Icon Pack End -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Icon Packs End -->
 
   <!-- Meta Start -->
   <meta charset="UTF-8">
@@ -66,7 +67,7 @@
       </button>
     </div>
     <div class="col-4">
-      <button class="btn btn-danger w-100" onclick="location.href = 'https://github.com/chengharv-pen';"><i class="fa-solid fa-briefcase pe-2"></i></i>Projects</button>
+      <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#projectModal"><i class="fa-solid fa-briefcase pe-2"></i></i>Projects</button>
     </div>
   </div>
   </div>
@@ -115,6 +116,342 @@
   </div>
 </div>
 <!-- Contact Modal End -->
+
+<!-- Project Modal Start -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content rounded-4 custom-dark">
+
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold">Projects (WORK IN PROGRESS)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="container">
+          <div class="row g-3">
+            
+            <!-- PROJECT CARD START -->
+
+            <!-- Project Card: GitHub Repository -->
+            <!-- Brain-to-text CNN-Transformer -->
+            <div class="col-md-6">
+              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <h6 class="card-title fw-bold d-flex align-items-center">
+                      <i class="bi bi-github me-2 text-primary"></i>
+                      Brain-to-text CNN-Transformer
+                    </h6>
+                    <p class="card-text small text-light">CNN-Transformer implementations that nearly match the research codebase's baseline GRU for Word Error Rate.</p>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="https://github.com/chengharv-pen/comp433_braintotext/tree/main/project_files" target="_blank" class="text-decoration-none">
+                      <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in GitHub</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card: GitHub Repository -->
+            <!-- Object Classifier -->
+            <div class="col-md-6">
+              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <h6 class="card-title fw-bold d-flex align-items-center">
+                      <i class="bi bi-github me-2 text-primary"></i>
+                      Object Classifier
+                    </h6>
+                    <p class="card-text small text-light">Using an MLP architecture to classify 50 objects. The data comes from a CNN model with frozen weights.</p>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="https://github.com/chengharv-pen/50-Object-Classifier" target="_blank" class="text-decoration-none">
+                      <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in GitHub</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card: Colab Notebook -->
+            <!-- Customer Churn Prediction -->
+            <div class="col-md-6">
+              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                      <h6 class="card-title fw-bold d-flex align-items-center">
+                        <!-- Inline Colab SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
+                          <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
+                                fill="none" 
+                                stroke="#E65100" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                          <path d="M24,21.6c0,0,5.7-8.1,12-8.1c6.1,0,9,4,9,7.5s-3.5,8.5-9,8.5c-5.3,0-12-7.9-12-7.9" 
+                                fill="none" 
+                                stroke="#FF9800" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                        </svg>
+                        Customer Churn Prediction
+                      </h6>
+                    <p class="card-text small text-light">Decision Tree and Random Forest classifiers that predict customer churn with a streaming service's dataset.</p>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="https://colab.research.google.com/github/chengharv-pen/Customer-Churn-Prediction/blob/main/code.ipynb" 
+                       target="_blank" 
+                       class="text-decoration-none d-inline-block">
+                      <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card: Colab Notebook -->
+            <!-- Recommender System -->
+            <div class="col-md-6">
+              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                      <h6 class="card-title fw-bold d-flex align-items-center">
+                        <!-- Inline Colab SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
+                          <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
+                                fill="none" 
+                                stroke="#E65100" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                          <path d="M24,21.6c0,0,5.7-8.1,12-8.1c6.1,0,9,4,9,7.5s-3.5,8.5-9,8.5c-5.3,0-12-7.9-12-7.9" 
+                                fill="none" 
+                                stroke="#FF9800" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                        </svg>
+                        Recommender System
+                      </h6>
+                    <p class="card-text small text-light">Applying Collaborative Filtering and Association Rule Mining on an e-commerce dataset.</p>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="https://colab.research.google.com/github/chengharv-pen/Recommender-System/blob/main/project_notebook.ipynb" 
+                       target="_blank" 
+                       class="text-decoration-none d-inline-block">
+                      <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card: Colab Notebook -->
+            <!-- Temperature Forecasting -->
+            <div class="col-md-6">
+              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                      <h6 class="card-title fw-bold d-flex align-items-center">
+                        <!-- Inline Colab SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
+                          <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
+                                fill="none" 
+                                stroke="#E65100" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                          <path d="M24,21.6c0,0,5.7-8.1,12-8.1c6.1,0,9,4,9,7.5s-3.5,8.5-9,8.5c-5.3,0-12-7.9-12-7.9" 
+                                fill="none" 
+                                stroke="#FF9800" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                        </svg>
+                        Temperature Forecasting
+                      </h6>
+                    <p class="card-text small text-light">LSTM and Transformer models that predict temperatures, given a time series of mean temperatures.</p>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="https://colab.research.google.com/github/chengharv-pen/Recommender-System/blob/main/project_notebook.ipynb" 
+                       target="_blank" 
+                       class="text-decoration-none d-inline-block">
+                      <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card: Colab Notebook -->
+            <!-- Titanic Survival Analysis -->
+            <div class="col-md-6">
+              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                      <h6 class="card-title fw-bold d-flex align-items-center">
+                        <!-- Inline Colab SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
+                          <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
+                                fill="none" 
+                                stroke="#E65100" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                          <path d="M24,21.6c0,0,5.7-8.1,12-8.1c6.1,0,9,4,9,7.5s-3.5,8.5-9,8.5c-5.3,0-12-7.9-12-7.9" 
+                                fill="none" 
+                                stroke="#FF9800" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                        </svg>
+                        Titanic Survival Analysis
+                      </h6>
+                    <p class="card-text small text-light">Comparing Perceptron and Logistic Regression models for predicting passengers' survival, given a Kaggle dataset.</p>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="https://colab.research.google.com/github/chengharv-pen/Recommender-System/blob/main/project_notebook.ipynb" 
+                       target="_blank" 
+                       class="text-decoration-none d-inline-block">
+                      <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card: Colab Notebook -->
+            <!-- Finger Count Classifier -->
+            <div class="col-md-6">
+              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                      <h6 class="card-title fw-bold d-flex align-items-center">
+                        <!-- Inline Colab SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
+                          <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
+                                fill="none" 
+                                stroke="#E65100" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                          <path d="M24,21.6c0,0,5.7-8.1,12-8.1c6.1,0,9,4,9,7.5s-3.5,8.5-9,8.5c-5.3,0-12-7.9-12-7.9" 
+                                fill="none" 
+                                stroke="#FF9800" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                        </svg>
+                        Finger Count Classifier
+                      </h6>
+                    <p class="card-text small text-light">CNN models that classify the number of fingers along with the hand side.</p>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="https://colab.research.google.com/github/chengharv-pen/Recommender-System/blob/main/project_notebook.ipynb" 
+                       target="_blank" 
+                       class="text-decoration-none d-inline-block">
+                      <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card: Colab Notebook -->
+            <!-- FashionMNIST Classifier -->
+            <div class="col-md-6">
+              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                      <h6 class="card-title fw-bold d-flex align-items-center">
+                        <!-- Inline Colab SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
+                          <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
+                                fill="none" 
+                                stroke="#E65100" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                          <path d="M24,21.6c0,0,5.7-8.1,12-8.1c6.1,0,9,4,9,7.5s-3.5,8.5-9,8.5c-5.3,0-12-7.9-12-7.9" 
+                                fill="none" 
+                                stroke="#FF9800" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                        </svg>
+                        FashionMNIST Classifier
+                      </h6>
+                    <p class="card-text small text-light">A short description of what this notebook does.</p>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="https://colab.research.google.com/github/chengharv-pen/Recommender-System/blob/main/project_notebook.ipynb" 
+                       target="_blank" 
+                       class="text-decoration-none d-inline-block">
+                      <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Project Card: Colab Notebook -->
+            <!-- California Housing Regression -->
+            <div class="col-md-6">
+              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                      <h6 class="card-title fw-bold d-flex align-items-center">
+                        <!-- Inline Colab SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
+                          <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
+                                fill="none" 
+                                stroke="#E65100" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                          <path d="M24,21.6c0,0,5.7-8.1,12-8.1c6.1,0,9,4,9,7.5s-3.5,8.5-9,8.5c-5.3,0-12-7.9-12-7.9" 
+                                fill="none" 
+                                stroke="#FF9800" 
+                                stroke-width="6" 
+                                stroke-linecap="round" />
+                        </svg>
+                        California Housing Regression
+                      </h6>
+                    <p class="card-text small text-light">A short description of what this notebook does.</p>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="https://colab.research.google.com/github/chengharv-pen/Recommender-System/blob/main/project_notebook.ipynb" 
+                       target="_blank" 
+                       class="text-decoration-none d-inline-block">
+                      <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card: GitHub Repository -->
+            <!-- Database Project -->
+            <div class="col-md-6">
+              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <h6 class="card-title fw-bold d-flex align-items-center">
+                      <i class="bi bi-github me-2 text-primary"></i>
+                      Social Network Website
+                    </h6>
+                    <p class="card-text small text-light">Using the LAMP stack along with a MySQL server to facilitate user to user interactions.</p>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="https://github.com/chengharv-pen/Database-Project" target="_blank" class="text-decoration-none">
+                      <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in GitHub</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- PROJECT CARD END -->
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Project Modal End -->
 
 <!-- Native JS Start -->
 <script src="js/index.js"></script>
