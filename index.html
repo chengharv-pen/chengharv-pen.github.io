@@ -25,12 +25,16 @@
 
 <body class="custom-dark d-flex flex-column justify-content-center align-items-center min-vh-100">
 
-<main class="d-block mx-auto" style="max-width:600px;">
+<main class="d-block mx-auto">
 
+    <!-- Introduction -->
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <img src="res/picture.jpg" alt="" class="rounded-5 d-block mx-auto my-3" style="width:50%">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+          <img 
+            src="res/picture.jpg"
+            alt="" class="rounded-5 d-block mx-auto my-3" 
+            style="max-width:300px; max-height:300px;">
           <p class="h1 text-center fw-bold">
             Chengharv Pen
           </p>
@@ -40,38 +44,41 @@
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- Short Description -->
+    <div class="container">
+      <div class="row">
+        <!-- fs range 1-5 seems to affect it, fs-6 and beyond is just normal text -->
+        <p class="text-center">
+          I enjoy working with real-world datasets: designing end-to-end pipelines, training and evaluating models, and
+          extracting meaningful insights from complex data. My projects include deep learning architectures, recommender
+          systems, and large-scale data analysis, with an emphasis on reproducible experimentation and practical impact.
+        </p>
+      </div>
+    </div>
+
+    <!-- Front Page Buttons -->
+    <div class="container mx-auto" style="max-width:600px;">
+      <div class="row g-2">
+        <div class="col-12 col-sm-4">
+          <a href="res/DATA_EN_ChengharvPen.pdf">
+            <button class="btn btn-danger w-100"><i class="fa-solid fa-eye pe-2"></i>View CV</button>
+          </a>
+        </div>
+        <div class="col-12 col-sm-4">
+          <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#contactModal">
+            <i class="fa-solid fa-message pe-2"></i>Contact
+          </button>
+        </div>
+        <div class="col-12 col-sm-4">
+          <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#projectModal"><i class="fa-solid fa-briefcase pe-2"></i></i>Projects</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Padding -->
+    <div class="container pb-5"></div>
 </main>
-
-<div class="container">
-  <div class="row">
-    <!-- fs range 1-5 seems to affect it, fs-6 and beyond is just normal text -->
-    <p class="text-center">
-      I enjoy working with real-world datasets: designing end-to-end pipelines, training and evaluating models, and
-      extracting meaningful insights from complex data. My projects include deep learning architectures, recommender
-      systems, and large-scale data analysis, with an emphasis on reproducible experimentation and practical impact.
-    </p>
-  </div>
-</div>
-
-<div class="container d-block mx-auto" style="max-width:600px;">
-  <div class="row">
-    <div class="col-4">
-      <a href="res/DATA_EN_ChengharvPen.pdf">
-        <button class="btn btn-danger w-100"><i class="fa-solid fa-eye pe-2"></i>View CV</button>
-      </a>
-    </div>
-    <div class="col-4">
-      <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#contactModal">
-        <i class="fa-solid fa-message pe-2"></i>Contact
-      </button>
-    </div>
-    <div class="col-4">
-      <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#projectModal"><i class="fa-solid fa-briefcase pe-2"></i></i>Projects</button>
-    </div>
-  </div>
-  </div>
-</div>
 
 <!-- Contact Modal Start -->
 <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
@@ -86,27 +93,24 @@
       <div class="modal-body">
         <div class="container">
           <div class="row g-2">
-            <div class="col-6">
-              <button class="btn btn-primary w-100"
-                      onclick="location.href='https://www.facebook.com/chengharv.pen';">
-                <i class="fa-brands fa-facebook pe-2"></i>Facebook
-              </button>
+            <div class="col-6 d-flex">
+              <a class="btn btn-primary w-100 d-flex align-items-center justify-content-center" href="https://www.facebook.com/chengharv.pen">
+                <i class="fa-brands fa-facebook me-2"></i>Facebook
+              </a>
             </div>
 
-            <div class="col-6">
-              <button class="btn btn-success w-100"
-                      onclick="location.href='https://wa.me/15145130099';">
-                <i class="fa-brands fa-whatsapp pe-2"></i>WhatsApp
-              </button>
+            <div class="col-6 d-flex">
+              <a class="btn btn-success w-100 d-flex align-items-center justify-content-center" href="https://wa.me/15145130099">
+                <i class="fa-brands fa-whatsapp me-2"></i>WhatsApp
+              </a>
             </div>
           </div>
 
           <div class="row mt-2">
             <div class="col-12">
-              <button class="btn btn-danger w-100"
-                      onclick="location.href='mailto:chengharvp@gmail.com';">
-                <i class="fa-solid fa-envelope pe-2"></i>Mail me directly
-              </button>
+              <a class="btn btn-danger w-100 d-flex align-items-center justify-content-center" href="mailto:chengharvp@gmail.com">
+                <i class="fa-solid fa-envelope me-2"></i>Mail me directly
+              </a>
             </div>
           </div>
         </div>
@@ -123,7 +127,7 @@
     <div class="modal-content rounded-4 custom-dark">
 
       <div class="modal-header">
-        <h5 class="modal-title fw-bold">Projects (WORK IN PROGRESS)</h5>
+        <h5 class="modal-title fw-bold">Projects</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
 
@@ -305,7 +309,7 @@
                     <p class="card-text small text-light">Comparing Perceptron and Logistic Regression models for predicting passengers' survival, given a Kaggle dataset.</p>
                   </div>
                   <div class="mt-3 text-center">
-                    <a href="https://colab.research.google.com/github/chengharv-pen/Recommender-System/blob/main/project_notebook.ipynb" 
+                    <a href="https://colab.research.google.com/github/chengharv-pen/Titanic-Survival-Analysis/blob/main/code.ipynb" 
                        target="_blank" 
                        class="text-decoration-none d-inline-block">
                       <span class="badge bg-primary text-black rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
@@ -452,9 +456,6 @@
   </div>
 </div>
 <!-- Project Modal End -->
-
-<br/>
-<br/>
   
 <!-- Native JS Start -->
 <script src="js/index.js"></script>
