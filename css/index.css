@@ -10,10 +10,11 @@
   color:#e5e7eb !important;
 }
 
-.hover-scale:hover {
+/* Maybe the hover for each project's box isn't necessary */
+/* .hover-scale:hover {
   transform: scale(1.03);
   transition: transform 0.2s ease-in-out;
-}
+} */
 
 .badge:hover {
   filter: brightness(1.2);
