@@ -4,6 +4,23 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.container-max-600 {
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 576px) {
+  .container-max-600 { max-width: 540px; }
+}
+
+@media (min-width: 768px) {
+  .container-max-600 { max-width: 600px; }
+}
+
 /*
 
   Modifications for preventing FOUC and refactoring theme-toggle.js

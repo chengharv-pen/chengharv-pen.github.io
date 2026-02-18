@@ -1,4 +1,4 @@
-(function() {
+(() => {
   const savedTheme = localStorage.getItem("preferredTheme");
   
   // 1. Check LocalStorage
