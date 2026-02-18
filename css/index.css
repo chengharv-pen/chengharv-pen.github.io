@@ -30,9 +30,13 @@
 /* Define the themes */
 :root[data-bs-theme="light"], 
 [data-bs-theme="light"] {
+  /* OLD COLORS
   --main-bg: #9fe4ff;
+  --card-bg: #ffffff; 
+  */
+  --main-bg: #fdfdfd;
+  --card-bg: #cce7ff;
   --main-text: #1e293b;
-  --card-bg: #ffffff;
   --title-border: #212529;
   --close-filter: none;
 }
