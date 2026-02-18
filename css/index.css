@@ -1,23 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
-*{
+* {
   font-family: 'Poppins', sans-serif;
-  box-sizing: content-box;
 }
 
-.custom-dark {
-  background-color:#121212 !important; 
-  color:#e5e7eb !important;
+/*
+
+  Modifications for preventing FOUC and refactoring theme-toggle.js
+
+*/
+
+/* Define the themes */
+:root[data-bs-theme="light"], 
+[data-bs-theme="light"] {
+  --main-bg: #9fe4ff;
+  --main-text: #1e293b;
+  --card-bg: #ffffff;
+  --title-border: #212529;
+  --close-filter: none;
 }
 
-/* Maybe the hover for each project's box isn't necessary */
-/* .hover-scale:hover {
-  transform: scale(1.03);
-  transition: transform 0.2s ease-in-out;
-} */
+:root[data-bs-theme="dark"], 
+[data-bs-theme="dark"] {
+  --main-bg: #121212;
+  --main-text: #e5e7eb;
+  --card-bg: #212529;
+  --title-border: #ffffff;
+  --close-filter: invert(1) grayscale(1) brightness(2);
+}
 
-.badge:hover {
+body .app-theme-container {
+  background-color: var(--main-bg);
+  color: var(--main-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Apply theme to targets */
+.theme-target {
+  background-color: var(--main-bg);
+  color: var(--main-text);
+  transition: background-color 0.3s ease;
+}
+
+.theme-card-target {background-color: var(--card-bg);}
+.title-target {border-color: var(--title-border);}
+.btn-close-target {filter: var(--close-filter);}
+
+.text-target {
+  color: var(--main-text);
+  transition: color 0.3s ease;
+}
+
+/*
+
+  Preventing text jumping from image space not being reserved while loading
+
+*/
+.intro-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto; /* preserves aspect ratio */
+  background-color: var(--main-bg);
+}
+
+/* 
+
+  Front Page Button fades
+
+*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-btn {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+
+/* 
+
+  Button/Badge for Mouse
+
+*/
+[data-bs-theme="light"] { --focus-ring: #0d6efd; }
+[data-bs-theme="dark"]  { --focus-ring: #ffca28; }
+
+body .btn:hover {
+  box-shadow: 0 0 0 2px var(--main-bg), 0 0 0 5px var(--focus-ring);
+  filter: brightness(1.1);
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+body a.badge:hover {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
   filter: brightness(1.2);
   transform: scale(1.05);
   transition: all 0.2s ease;
+}
+
+/*
+
+  Keyboard Accessibility
+
+*/
+body .btn:focus-visible,
+body .form-check-input:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--main-bg);
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+body a.badge:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+body .form-check-input:focus:not(:focus-visible),
+body .btn:focus:not(:focus-visible),
+body a.badge:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* 
+
+  Theme swtich and icon styling 
+
+*/
+.theme-switch {
+  gap: 0.5rem;
+}
+
+.theme-icon {
+  font-size: 1.25rem;
+}
+
+/* 
+
+  Icon dimming 
+  
+*/
+.theme-icon {
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+[data-bs-theme="light"] .bi-sun-fill,
+[data-bs-theme="dark"] .bi-moon-fill {
+  opacity: 1;
 }

@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to Chengharv Pen's page</title>
+
+  <!-- JS file that prevents FOUC -->
+  <script src="js/theme-init.js"></script>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Native CSS -->
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- Trying to preload the image (if possible) -->
+  <link rel="preload" as="image" href="res/picture.jpg">
 
   <!-- Favicon Icon generated from: https://favicon.io/favicon-generator/ -->
   <link rel="apple-touch-icon" sizes="180x180" href="/res/favicon/apple-touch-icon.png">
@@ -9,30 +26,40 @@
   <link rel="manifest" href="/res/favicon/site.webmanifest">
   <link rel="shortcut icon" href="/res/favicon/favicon.ico">
 
-  <!-- Native CSS Start -->
-  <link rel="stylesheet" href="css/index.css">
-  <!-- Native CSS Start -->
+  <!-- for some icons... -->
+  <script src="https://kit.fontawesome.com/94b68a0c09.js" crossorigin="anonymous" defer></script>
+</head> 
 
-  <!-- Bootstrap CSS Start -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <!-- Bootstrap CSS End -->
+<body class="app-theme-container theme-target d-flex flex-column justify-content-center align-items-center min-vh-100">
 
-  <!-- Icon Packs Start -->
-  <script src="https://kit.fontawesome.com/94b68a0c09.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <!-- Icon Packs End -->
-
-  <!-- Meta Start -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Welcome to Chengharv Pen's page</title>
-  <!-- Meta End -->
-</head>
-
-<body class="custom-dark d-flex flex-column justify-content-center align-items-center min-vh-100">
-
+<!-- Main Start -->
 <main class="d-block mx-auto">
+
+    <!-- Light/Dark Mode Switch -->
+    <div class="container pt-4">
+      <div class="row justify-content-center">
+        <div class="col-auto mb-3">
+          <div class="theme-switch d-flex align-items-center">
+            
+            <i class="bi bi-sun-fill theme-icon" aria-hidden="true"></i>
+
+            <div class="form-check form-switch m-0 mx-2">
+              <input 
+                class="form-check-input" 
+                type="checkbox" 
+                role="switch" 
+                id="themeToggle"
+                aria-label="Toggle between dark and light mode"
+              >
+            </div>
+
+            <i class="bi bi-moon-fill theme-icon" aria-hidden="true"></i>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
 
     <!-- Introduction -->
     <div class="container">
@@ -40,8 +67,12 @@
         <div class="col-12 col-sm-10 col-md-8 col-lg-6">
           <img 
             src="res/picture.jpg"
-            alt="" class="rounded-5 d-block mx-auto my-3" 
-            style="max-width:300px; max-height:300px;">
+            alt="Chengharv Pen Profile Picture"
+            class="rounded-5 d-block mx-auto my-3 intro-img" 
+            width="2075"
+            height="2686"
+            fetchpriority="high"
+            loading="eager">
           <p class="h1 text-center fw-bold">
             Chengharv Pen
           </p>
@@ -67,18 +98,20 @@
     <!-- Front Page Buttons -->
     <div class="container mx-auto" style="max-width:600px;">
       <div class="row g-2">
-        <div class="col-12 col-sm-4">
-          <a href="res/DATA_EN_ChengharvPen.pdf" target="_blank">
-            <button class="btn btn-danger w-100"><i class="fa-solid fa-eye pe-2"></i>View CV</button>
+        <div class="col-12 col-sm-4 reveal-btn delay-1">
+          <a class="btn btn-danger w-100" href="res/DATA_EN_ChengharvPen.pdf" target="_blank">
+            <i class="fa-solid fa-eye pe-2"></i>View CV
           </a>
         </div>
-        <div class="col-12 col-sm-4">
+        <div class="col-12 col-sm-4 reveal-btn delay-2">
           <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#contactModal">
             <i class="fa-solid fa-message pe-2"></i>Contact
           </button>
         </div>
-        <div class="col-12 col-sm-4">
-          <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#projectModal"><i class="fa-solid fa-briefcase pe-2"></i></i>Projects</button>
+        <div class="col-12 col-sm-4 reveal-btn delay-3">
+          <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#projectModal">
+            <i class="fa-solid fa-briefcase pe-2"></i></i>Projects
+          </button>
         </div>
       </div>
     </div>
@@ -86,15 +119,16 @@
     <!-- Bottom Padding -->
     <div class="container pb-5"></div>
 </main>
+<!-- Main End -->
 
 <!-- Contact Modal Start -->
 <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-4 custom-dark">
+    <div class="modal-content rounded-4 theme-target">
 
-      <div class="modal-header">
+      <div class="modal-header title-target">
         <h5 class="modal-title fw-bold">Contact Me</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="btn-close btn-close-target" data-bs-dismiss="modal"></button>
       </div>
 
       <div class="modal-body">
@@ -151,11 +185,11 @@
 <!-- Project Modal Start -->
 <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-    <div class="modal-content rounded-4 custom-dark">
+    <div class="modal-content rounded-4 theme-target">
 
-      <div class="modal-header">
+      <div class="modal-header title-target">
         <h5 class="modal-title fw-bold">Projects</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="btn-close btn-close-target" data-bs-dismiss="modal"></button>
       </div>
 
       <div class="modal-body">
@@ -167,18 +201,22 @@
             <!-- Project Card: GitHub Repository -->
             <!-- Brain-to-text CNN-Transformer -->
             <div class="col-md-6">
-              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+              <div class="card h-100 border-primary shadow-sm hover-scale theme-card-target text-target">
                 <div class="card-body d-flex flex-column justify-content-between">
                   <div>
                     <h6 class="card-title fw-bold d-flex align-items-center">
-                      <i class="bi bi-github me-2 text-white"></i>
+                      <i class="bi bi-github me-2 text-target"></i>
                       Brain-to-text CNN-Transformer
                     </h6>
-                    <p class="card-text small text-light">CNN-Transformer implementations that nearly match the research codebase's baseline GRU for Word Error Rate.</p>
+                    <p class="card-text small text-target">CNN-Transformer implementations that nearly match the research codebase's baseline GRU for Word Error Rate.</p>
                   </div>
                   <div class="mt-3 text-center">
-                    <a href="https://github.com/chengharv-pen/comp433_braintotext/tree/main/project_files" target="_blank" class="text-decoration-none">
-                      <span class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm">Open in GitHub</span>
+                    <a 
+                      href="https://github.com/chengharv-pen/comp433_braintotext/tree/main/project_files" 
+                      target="_blank" 
+                      class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm text-decoration-none"
+                    >
+                      Open in GitHub
                     </a>
                   </div>
                 </div>
@@ -188,18 +226,22 @@
             <!-- Project Card: GitHub Repository -->
             <!-- Object Classifier -->
             <div class="col-md-6">
-              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+              <div class="card h-100 border-primary shadow-sm hover-scale theme-card-target text-target">
                 <div class="card-body d-flex flex-column justify-content-between">
                   <div>
                     <h6 class="card-title fw-bold d-flex align-items-center">
-                      <i class="bi bi-github me-2 text-white"></i>
+                      <i class="bi bi-github me-2 text-target"></i>
                       Object Classifier
                     </h6>
-                    <p class="card-text small text-light">Using an MLP architecture to classify 50 objects. The data comes from a CNN architecture with frozen weights.</p>
+                    <p class="card-text small text-target">Using an MLP architecture to classify 50 objects. The data comes from a CNN architecture with frozen weights.</p>
                   </div>
                   <div class="mt-3 text-center">
-                    <a href="https://github.com/chengharv-pen/50-Object-Classifier" target="_blank" class="text-decoration-none">
-                      <span class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm">Open in GitHub</span>
+                    <a 
+                      href="https://github.com/chengharv-pen/50-Object-Classifier" 
+                      target="_blank" 
+                      class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm text-decoration-none"
+                    >
+                      Open in GitHub
                     </a>
                   </div>
                 </div>
@@ -209,10 +251,10 @@
             <!-- Project Card: Colab Notebook -->
             <!-- Customer Churn Prediction -->
             <div class="col-md-6">
-              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+              <div class="card h-100 border-primary shadow-sm hover-scale theme-card-target text-target">
                 <div class="card-body d-flex flex-column justify-content-between">
                   <div>
-                      <h6 class="card-title fw-bold d-flex align-items-center">
+                      <h6 class="card-title fw-bold d-flex align-items-center text-target">
                         <!-- Inline Colab SVG -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
                           <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
@@ -228,13 +270,15 @@
                         </svg>
                         Customer Churn Prediction
                       </h6>
-                    <p class="card-text small text-light">Decision Tree and Random Forest classifiers that predict customer churn with a streaming service's dataset.</p>
+                    <p class="card-text small text-target">Decision Tree and Random Forest classifiers that predict customer churn with a streaming service's dataset.</p>
                   </div>
                   <div class="mt-3 text-center">
-                    <a href="https://colab.research.google.com/github/chengharv-pen/Customer-Churn-Prediction/blob/main/code.ipynb" 
-                       target="_blank" 
-                       class="text-decoration-none d-inline-block">
-                      <span class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    <a 
+                      href="https://colab.research.google.com/github/chengharv-pen/Customer-Churn-Prediction/blob/main/code.ipynb" 
+                      target="_blank" 
+                      class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm text-decoration-none"
+                    >
+                      Open in Colab
                     </a>
                   </div>
                 </div>
@@ -244,10 +288,10 @@
             <!-- Project Card: Colab Notebook -->
             <!-- Recommender System -->
             <div class="col-md-6">
-              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+              <div class="card h-100 border-primary shadow-sm hover-scale theme-card-target text-target">
                 <div class="card-body d-flex flex-column justify-content-between">
                   <div>
-                      <h6 class="card-title fw-bold d-flex align-items-center">
+                      <h6 class="card-title fw-bold d-flex align-items-center text-target">
                         <!-- Inline Colab SVG -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
                           <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
@@ -263,13 +307,14 @@
                         </svg>
                         Recommender System
                       </h6>
-                    <p class="card-text small text-light">Applying Collaborative Filtering and Association Rule Mining on an e-commerce dataset.</p>
+                    <p class="card-text small text-target">Applying Collaborative Filtering and Association Rule Mining on an e-commerce dataset.</p>
                   </div>
                   <div class="mt-3 text-center">
                     <a href="https://colab.research.google.com/github/chengharv-pen/Recommender-System/blob/main/project_notebook.ipynb" 
-                       target="_blank" 
-                       class="text-decoration-none d-inline-block">
-                      <span class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                      target="_blank" 
+                      class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm text-decoration-none"
+                    >
+                      Open in Colab
                     </a>
                   </div>
                 </div>
@@ -279,10 +324,10 @@
             <!-- Project Card: Colab Notebook -->
             <!-- Temperature Forecasting -->
             <div class="col-md-6">
-              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+              <div class="card h-100 border-primary shadow-sm hover-scale theme-card-target text-target">
                 <div class="card-body d-flex flex-column justify-content-between">
                   <div>
-                      <h6 class="card-title fw-bold d-flex align-items-center">
+                      <h6 class="card-title fw-bold d-flex align-items-center text-target">
                         <!-- Inline Colab SVG -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
                           <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
@@ -298,13 +343,15 @@
                         </svg>
                         Temperature Forecasting
                       </h6>
-                    <p class="card-text small text-light">LSTM and Transformer models that predict temperatures, given a time series of mean temperatures.</p>
+                    <p class="card-text small text-target">LSTM and Transformer models that predict temperatures, given a time series of mean temperatures.</p>
                   </div>
                   <div class="mt-3 text-center">
-                    <a href="https://colab.research.google.com/github/chengharv-pen/Temperature-Forecasting/blob/main/LSTM.ipynb" 
-                       target="_blank" 
-                       class="text-decoration-none d-inline-block">
-                      <span class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    <a 
+                      href="https://colab.research.google.com/github/chengharv-pen/Temperature-Forecasting/blob/main/LSTM.ipynb" 
+                      target="_blank" 
+                      class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm text-decoration-none"
+                    >
+                      Open in Colab
                     </a>
                   </div>
                 </div>
@@ -314,10 +361,10 @@
             <!-- Project Card: Colab Notebook -->
             <!-- Titanic Survival Analysis -->
             <div class="col-md-6">
-              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+              <div class="card h-100 border-primary shadow-sm hover-scale theme-card-target text-target">
                 <div class="card-body d-flex flex-column justify-content-between">
                   <div>
-                      <h6 class="card-title fw-bold d-flex align-items-center">
+                      <h6 class="card-title fw-bold d-flex align-items-center text-target">
                         <!-- Inline Colab SVG -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
                           <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
@@ -333,13 +380,15 @@
                         </svg>
                         Titanic Survival Analysis
                       </h6>
-                    <p class="card-text small text-light">Comparing Perceptron and Logistic Regression models for predicting passengers' survival, given a Kaggle dataset.</p>
+                    <p class="card-text small text-target">Comparing Perceptron and Logistic Regression models for predicting passengers' survival, given a Kaggle dataset.</p>
                   </div>
                   <div class="mt-3 text-center">
-                    <a href="https://colab.research.google.com/github/chengharv-pen/Titanic-Survival-Analysis/blob/main/code.ipynb" 
-                       target="_blank" 
-                       class="text-decoration-none d-inline-block">
-                      <span class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    <a 
+                      href="https://colab.research.google.com/github/chengharv-pen/Titanic-Survival-Analysis/blob/main/code.ipynb" 
+                      target="_blank" 
+                      class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm text-decoration-none"
+                    >
+                      Open in Colab
                     </a>
                   </div>
                 </div>
@@ -349,10 +398,10 @@
             <!-- Project Card: Colab Notebook -->
             <!-- Finger Count Classifier -->
             <div class="col-md-6">
-              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+              <div class="card h-100 border-primary shadow-sm hover-scale theme-card-target text-target">
                 <div class="card-body d-flex flex-column justify-content-between">
                   <div>
-                      <h6 class="card-title fw-bold d-flex align-items-center">
+                      <h6 class="card-title fw-bold d-flex align-items-center text-target">
                         <!-- Inline Colab SVG -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
                           <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
@@ -368,13 +417,15 @@
                         </svg>
                         Finger Count Classifier
                       </h6>
-                    <p class="card-text small text-light">Testing a ResNet18 model for the task of classifying the number of fingers and the hand side.</p>
+                    <p class="card-text small text-target">Testing a ResNet18 model for the task of classifying the number of fingers and the hand side.</p>
                   </div>
                   <div class="mt-3 text-center">
-                    <a href="https://colab.research.google.com/github/chengharv-pen/Finger-Count-Classifier/blob/main/code.ipynb" 
-                       target="_blank" 
-                       class="text-decoration-none d-inline-block">
-                      <span class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    <a 
+                      href="https://colab.research.google.com/github/chengharv-pen/Finger-Count-Classifier/blob/main/code.ipynb" 
+                      target="_blank" 
+                      class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm text-decoration-none"
+                    >
+                      Open in Colab
                     </a>
                   </div>
                 </div>
@@ -384,10 +435,10 @@
             <!-- Project Card: Colab Notebook -->
             <!-- FashionMNIST Classifier -->
             <div class="col-md-6">
-              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+              <div class="card h-100 border-primary shadow-sm hover-scale theme-card-target text-target">
                 <div class="card-body d-flex flex-column justify-content-between">
                   <div>
-                      <h6 class="card-title fw-bold d-flex align-items-center">
+                      <h6 class="card-title fw-bold d-flex align-items-center text-target">
                         <!-- Inline Colab SVG -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 48 48">
                           <path d="M24,21.6c0,0-5.7-8.1-12-8.1c-6.1,0-9,4-9,7.5s3.5,8.5,9,8.5c5.3,0,12-7.9,12-7.9" 
@@ -403,13 +454,15 @@
                         </svg>
                         FashionMNIST Classifier
                       </h6>
-                    <p class="card-text small text-light">Comparing neural network optimizers for classifying fashion items.</p>
+                    <p class="card-text small text-target">Comparing neural network optimizers for classifying fashion items.</p>
                   </div>
                   <div class="mt-3 text-center">
-                    <a href="https://colab.research.google.com/github/chengharv-pen/FashionMNIST-Classifier/blob/main/code.ipynb" 
-                       target="_blank" 
-                       class="text-decoration-none d-inline-block">
-                      <span class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm">Open in Colab</span>
+                    <a 
+                      href="https://colab.research.google.com/github/chengharv-pen/FashionMNIST-Classifier/blob/main/code.ipynb" 
+                      target="_blank" 
+                      class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm text-decoration-none"
+                    >
+                      Open in Colab
                     </a>
                   </div>
                 </div>
@@ -419,18 +472,22 @@
             <!-- Project Card: GitHub Repository -->
             <!-- Social Network Website -->
             <div class="col-md-6">
-              <div class="card h-100 text-white bg-dark border-primary shadow-sm hover-scale">
+              <div class="card h-100 border-primary shadow-sm hover-scale theme-card-target text-target">
                 <div class="card-body d-flex flex-column justify-content-between">
                   <div>
                     <h6 class="card-title fw-bold d-flex align-items-center">
-                      <i class="bi bi-github me-2 text-white"></i>
+                      <i class="bi bi-github me-2 text-target"></i>
                       Social Network Website
                     </h6>
-                    <p class="card-text small text-light">Using the LAMP stack along with a MySQL server to facilitate user to user interactions.</p>
+                    <p class="card-text small text-target">Using the LAMP stack along with a MySQL server to facilitate user to user interactions.</p>
                   </div>
                   <div class="mt-3 text-center">
-                    <a href="https://github.com/chengharv-pen/Social-Network-Website" target="_blank" class="text-decoration-none">
-                      <span class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm">Open in GitHub</span>
+                    <a 
+                      href="https://github.com/chengharv-pen/Social-Network-Website"                      
+                      target="_blank" 
+                      class="badge bg-primary text-white rounded-pill px-3 py-2 shadow-sm text-decoration-none"
+                    >
+                      Open in GitHub
                     </a>
                   </div>
                 </div>
@@ -449,7 +506,7 @@
 <!-- Project Modal End -->
   
 <!-- Native JS Start -->
-<script src="js/index.js"></script>
+<script src="js/theme-toggle.js"></script>
 <!-- Native JS End -->
 
 <!-- Bootstrap JS Start -->
