@@ -21,7 +21,7 @@
     }
   }
 
-  // Loading effect
+  // This event listener performs a fade-out whenever the page loads
   window.addEventListener('load', () => {
     const loader = document.getElementById('page-loader');
     if (loader) {
