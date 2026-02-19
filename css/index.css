@@ -23,6 +23,29 @@
 
 /*
 
+  Initial load effect
+
+*/
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-bg);
+  z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s;
+  opacity: 1;
+  visibility: visible;
+}
+
+#page-loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*
+
   Modifications for preventing FOUC and refactoring theme-toggle.js
 
 */
@@ -30,15 +53,12 @@
 /* Define the themes */
 :root[data-bs-theme="light"], 
 [data-bs-theme="light"] {
-  /* OLD COLORS
-  --main-bg: #9fe4ff;
-  --card-bg: #ffffff; 
-  */
   --main-bg: #fdfdfd;
   --card-bg: #b3ffd9;
   --main-text: #1e293b;
   --title-border: #212529;
   --close-filter: none;
+  --bs-modal-border-color: var(--title-border);
 }
 
 :root[data-bs-theme="dark"], 
@@ -48,6 +68,7 @@
   --card-bg: #212529;
   --title-border: #ffffff;
   --close-filter: invert(1) grayscale(1) brightness(2);
+  --bs-modal-border-color: var(--title-border);
 }
 
 body .app-theme-container {

@@ -1,3 +1,4 @@
+// Arrow Function that is immediately invoked
 (() => {
   let lastModalTrigger = null;
 
