@@ -6,7 +6,7 @@
     savedTheme = "dark";
     localStorage.setItem("preferredTheme", savedTheme);
   }
-  document.documentElement.setAttribute("data-bs-theme", initialTheme);
+  document.documentElement.setAttribute("data-bs-theme", savedTheme);
   
   // Language init
   let savedLang = localStorage.getItem("preferredLanguage");
