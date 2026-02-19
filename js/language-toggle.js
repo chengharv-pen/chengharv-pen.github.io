@@ -23,6 +23,11 @@ function switchLanguage() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const languageToggle = document.getElementById('languageToggle');
+    if (!languageToggle) return;
+
+    // Make the toggle match saved preference, even on initial LocalStorage
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    languageToggle.checked = (savedLang === 'en');
 
     // This event listener allows keyboard accessibility on language switch
     languageToggle.addEventListener("keydown", (e) => {
@@ -37,12 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const modalElement = document.getElementById('settingsModal');
         const settingsModal = new bootstrap.Modal(modalElement);
         settingsModal.show();
-        
-        // Make the checkbox match the current HTML's language
-        const isEnglish = window.location.pathname.includes('index.html') || window.location.pathname.endsWith('/');
-        if (languageToggle) {
-            languageToggle.checked = isEnglish;
-        }
         
         // Clean URL to prevent re-opening on manual refresh
         history.replaceState("", document.title, window.location.pathname);
