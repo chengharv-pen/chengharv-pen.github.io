@@ -1,4 +1,16 @@
 User-agent: *
-Allow: /
+Disallow:
 
 Sitemap: https://chengharv-pen.github.io/sitemap.xml
+
+Allow: /#project-braintotext
+Allow: /#project-object-classifier
+Allow: /#project-customer-churn
+Allow: /#project-recommender-system
+Allow: /#project-temperature-forecasting
+Allow: /#project-titanic-survival
+Allow: /#project-finger-count
+Allow: /#project-fashion-mnist
+Allow: /#project-social-network
+
+Allow: /res/
