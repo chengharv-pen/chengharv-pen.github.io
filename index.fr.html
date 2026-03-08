@@ -28,6 +28,31 @@
 
   <!-- for some icons... -->
   <script src="https://kit.fontawesome.com/94b68a0c09.js" crossorigin="anonymous" defer></script>
+
+  <!-- Person schema for SEO hopefully -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Chengharv Pen",
+    "url": "https://yoursite.com",
+    "image": "https://yoursite.com/res/profile.jpg",
+    "sameAs": [
+      "https://github.com/chengharv-pen",
+      "https://www.linkedin.com/in/chengharv-pen",
+      "https://www.facebook.com/chengharv.pen"
+    ],
+    "jobTitle": "Computer Science Student",
+    "knowsAbout": [
+      "Machine Learning",
+      "Deep Learning",
+      "Computer Vision",
+      "Neural Networks",
+      "Python",
+      "Docker"
+    ]
+  }
+  </script>
 </head> 
 
 <body class="app-theme-container theme-target d-flex flex-column min-vh-100"> 
@@ -135,14 +160,14 @@
           </a>
         </div>
         <div class="col-12 col-sm-4 reveal-btn delay-2">
-          <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#contactModal">
+          <a class="btn btn-danger w-100" href="#contact" data-bs-toggle="modal" data-bs-target="#contactModal">
             <i class="fa-solid fa-message pe-2"></i>Contact
-          </button>
+          </a>
         </div>
         <div class="col-12 col-sm-4 reveal-btn delay-3">
-          <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#projectModal">
+          <a class="btn btn-danger w-100" href="#projects" data-bs-toggle="modal" data-bs-target="#projectModal">
             <i class="fa-solid fa-briefcase pe-2"></i>Projets
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -544,6 +569,7 @@
 <script src="js/theme-toggle.js"></script>
 <script src="js/language-toggle.js"></script>
 <script src="js/blur-control.js"></script>
+<script src="js/seo.js"></script>
 <!-- Native JS End -->
 
 </body>
