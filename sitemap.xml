@@ -1,108 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Main page -->
   <url>
     <loc>https://chengharv-pen.github.io/</loc>
     <priority>1.0</priority>
-  </url>
-
-  <!-- Contact Links -->
-  <url>
-    <loc>https://www.linkedin.com/in/chengharv-pen</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://github.com/chengharv-pen</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.facebook.com/chengharv.pen</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://wa.me/15145130099</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>mailto:chengharvp@gmail.com</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Internal Anchors (for SEO) -->
-  <url>
-    <loc>https://chengharv-pen.github.io/#project-braintotext</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://chengharv-pen.github.io/#project-object-classifier</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://chengharv-pen.github.io/#project-customer-churn</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://chengharv-pen.github.io/#project-recommender-system</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://chengharv-pen.github.io/#project-temperature-forecasting</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://chengharv-pen.github.io/#project-titanic-survival</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://chengharv-pen.github.io/#project-finger-count</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://chengharv-pen.github.io/#project-fashion-mnist</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://chengharv-pen.github.io/#project-social-network</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- External Project URLs -->
-  <url>
-    <loc>https://github.com/chengharv-pen/comp433_braintotext/tree/main/project_files</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://github.com/chengharv-pen/50-Object-Classifier</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://colab.research.google.com/github/chengharv-pen/Customer-Churn-Prediction/blob/main/code.ipynb</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://colab.research.google.com/github/chengharv-pen/Recommender-System/blob/main/project_notebook.ipynb</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://colab.research.google.com/github/chengharv-pen/Temperature-Forecasting/blob/main/LSTM.ipynb</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://colab.research.google.com/github/chengharv-pen/Titanic-Survival-Analysis/blob/main/code.ipynb</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://colab.research.google.com/github/chengharv-pen/Finger-Count-Classifier/blob/main/code.ipynb</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://colab.research.google.com/github/chengharv-pen/FashionMNIST-Classifier/blob/main/code.ipynb</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://github.com/chengharv-pen/Social-Network-Website</loc>
-    <priority>0.9</priority>
   </url>
 
 </urlset>
